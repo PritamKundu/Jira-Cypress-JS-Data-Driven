@@ -1,0 +1,35 @@
+{
+  "name": "cypress_practice",
+  "version": "1.0.0",
+  "description": "clone this repo and open terminal with root project directory and following the command step by step:",
+  "main": "index.js",
+  "scripts": {
+    "test-runner": "npx cypress open",
+    "test-report": "npx cypress run",
+    "headed": "npx cypress run --headed",
+    "headless": "npx cypress run -- headless",
+    "cy:run": "cypress run --env allure=true --browser chrome",
+    "allure:report": "allure generate allure-results --clean -o allure-report",
+    "allure:clear": "if [ -d allure-results ]; then rm -Rf allure-results; fi && if [ -d allure-report ]; then rm -Rf allure-report; fi && if [ -d cypress//screenshots ]; then rm -Rf cypress//screenshots; fi && if [ -d cypress//videos ]; then rm -Rf cypress//videos; fi",
+    "pretest": "npm run allure:clear",
+    "test": "npm run cy:run || npm run posttest",
+    "posttest": "npm run allure:report",
+    "cy:runwithdashboard": "cypress run --env allure=true --browser chrome --headed",
+    "dashboard:report": "npm run cy:runwithdashboard || npm run posttest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "allure-commandline": "^2.23.0",
+    "cypress": "^10.10.0",
+    "cypress-real-events": "^1.7.4",
+    "mocha-allure-reporter": "^1.4.0"
+  },
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.40.0",
+    "cypress-iframe": "^1.0.1",
+    "cypress-xpath": "^2.0.1",
+    "node-xlsx": "^0.23.0"
+  },
+  "keywords": []
+}
