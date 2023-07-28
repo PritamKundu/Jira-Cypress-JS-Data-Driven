@@ -44,6 +44,7 @@ clone this repo and open terminal with root project directory and following the 
   npm run allure:report
   ```
 
+
  #### Single run:
 
   ```bash
