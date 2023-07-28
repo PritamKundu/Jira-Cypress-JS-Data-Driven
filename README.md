@@ -30,7 +30,6 @@ clone this repo and open terminal with root project directory and following the 
  npm i cypress-iframe
  ```
 
- 
  #### Suite run: 
 
    ```bash
