@@ -16,7 +16,6 @@ describe("Jira Contract Management Tools Check", () => {
       cy.parseXlsx('cypress/fixtures/credentials.xlsx')
         .then(
           jsonData => {
-
             const rowLength = Cypress.$(jsonData[0].data).length
             for (let i = 1; i < rowLength; i++) {
 
