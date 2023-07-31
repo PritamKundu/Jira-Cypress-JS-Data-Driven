@@ -11,6 +11,7 @@ describe("Jira Contract Management Tools Check", () => {
     cy.visit("https://e2e-automation.atlassian.net/");
   })
 
+  
   it("Jira Contract Management Tools Check", () => {
     cy.readFile('cypress/fixtures/utils.json').then((Utils) => {
       cy.parseXlsx('cypress/fixtures/credentials.xlsx')
