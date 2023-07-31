@@ -1,7 +1,6 @@
 import 'cypress-iframe';
 import { Locators } from "../PageObjects/Pages/Locators";
 
-
 describe("Jira Contract Management Tools Check", () => {
   const jira = new Locators();
   before(() => {
