@@ -10,7 +10,6 @@ describe("Jira Contract Management Tools Check", () => {
     cy.visit("https://e2e-automation.atlassian.net/");
   })
 
-  
   it("Jira Contract Management Tools Check", () => {
     cy.readFile('cypress/fixtures/utils.json').then((Utils) => {
       cy.parseXlsx('cypress/fixtures/credentials.xlsx')
@@ -47,7 +46,7 @@ describe("Jira Contract Management Tools Check", () => {
               cy.get(jira.profile_icon, { timeout: 10000 }).click({ force: true });
               cy.xpath(jira.logout, { timeout: 10000 }).click({ force: true });
               cy.get(jira.logout_final, { timeout: 10000 }).click({ force: true });
-              
+
             }
           }
         )
